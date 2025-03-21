@@ -1,0 +1,89 @@
+﻿/* Full-width container */
+.details-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Content area */
+.details-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+}
+
+/* Page Titles */
+.title {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 30px;
+}
+
+    .section h2 {
+        font-size: 2rem;
+        color: #343a40;
+        border-bottom: 3px solid #007bff;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .section p, .section ul {
+        font-size: 1.2rem;
+        text-align: left;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    /* List styling */
+    .section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+/* Back Button */
+.back-button {
+    margin-top: 30px;
+}
+
+    .back-button .btn {
+        background: #007bff;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+        .back-button .btn:hover {
+            background: #0056b3;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .details-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.7rem;
+    }
+
+    .section p, .section ul {
+        font-size: 1rem;
+    }
+}

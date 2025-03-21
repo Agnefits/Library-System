@@ -1,0 +1,33 @@
+@model IEnumerable<Author>
+
+@{
+    ViewData["Title"] = "Show Authors";
+}
+
+<h2>Authors</h2>
+<a asp-action="Create" class="btn btn-primary">Add Author</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Nationality</th>
+            <th>Birth Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.Name</td>
+                <td>@author.Nationality</td>
+                <td>@author.BirthDate.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@author.AuthorID" class="btn btn-warning">Edit</a>
+                    <a asp-action="DeleteAuthor" asp-route-id="@author.AuthorID" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

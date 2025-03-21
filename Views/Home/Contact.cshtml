@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+}
+
+<div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>If you have any inquiries, please fill out the form below:</p>
+
+    <form id="contactForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea id="message" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+
+        let mailtoLink = `mailto:abdallah1662005@example.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${encodeURIComponent(email)}`;
+
+        window.location.href = mailtoLink;
+    });
+</script>

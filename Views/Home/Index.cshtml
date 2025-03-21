@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+}
+
+<div class="home-container">
+    <div class="home-content">
+        <h1 class="title">Welcome to the Library</h1>
+        <p class="intro-text">
+            Explore a wide collection of books and efficiently manage your library.
+        </p>
+
+        <div class="features">
+            <div class="feature-box">
+                <h3>Books</h3>
+                <p>Browse, add, edit, and delete books.</p>
+                <a asp-controller="Book" asp-action="Index" class="btn btn-primary">View Books</a>
+            </div>
+
+            <div class="feature-box">
+                <h3>Authors</h3>
+                <p>Manage author details.</p>
+                <a asp-controller="Author" asp-action="Index" class="btn btn-primary">View Authors</a>
+            </div>
+
+            <div class="feature-box">
+                <h3>Publishers</h3>
+                <p>View and manage book publishers.</p>
+                <a asp-controller="Publisher" asp-action="Index" class="btn btn-primary">View Publishers</a>
+            </div>
+        </div>
+    </div>
+</div>

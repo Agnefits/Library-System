@@ -1,0 +1,97 @@
+﻿/* Full-screen container */
+.home-container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Content area */
+.home-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Page Title */
+.title {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Intro Text */
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Feature Boxes */
+.feature-box {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .feature-box:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Feature Titles */
+    .feature-box h3 {
+        font-size: 1.5rem;
+        color: #343a40;
+        margin-bottom: 10px;
+    }
+
+    /* Feature Description */
+    .feature-box p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    /* Buttons */
+    .feature-box .btn {
+        background: #007bff;
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+        .feature-box .btn:hover {
+            background: #0056b3;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .feature-box {
+        max-width: 100%;
+    }
+}
